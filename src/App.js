@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import Home from "./Routes/Home";
-import CoinPage from "./Routes/CoinPage";
+import Home from "./Pages/Home";
+import CoinPage from "./Pages/CoinPage";
 
 function App() {
   return (

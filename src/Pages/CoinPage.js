@@ -2,8 +2,8 @@ import React from "react";
 import Axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import "../Routes/Styles/CoinPage.css";
 import BackgroundImg from "../Images/cryptobckg.jpeg";
+import "./Styles/CoinPage.css";
 
 function CoinPage() {
   let { id } = useParams();
