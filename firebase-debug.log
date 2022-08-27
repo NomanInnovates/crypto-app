@@ -1,0 +1,21 @@
+[debug] [2022-08-27T18:13:41.248Z] ----------------------------------------------------------------------
+[debug] [2022-08-27T18:13:41.250Z] Command:       /home/noman/.nvm/versions/node/v18.7.0/bin/node /home/noman/.nvm/versions/node/v18.7.0/bin/firebase init
+[debug] [2022-08-27T18:13:41.250Z] CLI Version:   11.8.0
+[debug] [2022-08-27T18:13:41.250Z] Platform:      linux
+[debug] [2022-08-27T18:13:41.251Z] Node Version:  v18.7.0
+[debug] [2022-08-27T18:13:41.251Z] Time:          Sat Aug 27 2022 23:13:41 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-08-27T18:13:41.251Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-27T18:13:41.258Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-27T18:13:41.258Z] > authorizing via signed-in user (nomansandhu0125@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/noman/Projects/Practice/crypto-app
+

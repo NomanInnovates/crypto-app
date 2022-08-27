@@ -11,13 +11,16 @@ function CoinPage() {
   // coin start has to be null first to give time to fetch API data
 
   useEffect(() => {
+    
     console.log(id);
     Axios.get(`https://api.coingecko.com/api/v3/coins/${id}`).then(
       (response) => {
         console.log(response.data);
         setCoin(response.data);
       }
-    );
+    ).catch(()=>{
+      setCoin(null)
+    })
   }, []);
 
   // if statement to check if data has reached, only then render the component

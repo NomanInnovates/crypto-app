@@ -47,20 +47,20 @@ function Home() {
         </div>
       </div>
       <div className="coinContainer">
-        {isLoading && <h1 className="loadingMssg">Data Loading...</h1>}
-        {filterCoins.map((coins) => {
-          return (
-            <Coin
-              id={coins.id}
-              icon={coins.image}
-              coinName={coins.name}
-              coinSymbol={coins.symbol}
-              price={coins.current_price}
-              marketCap={coins.market_cap}
-              priceChange={coins.price_change_percentage_24h}
-            />
-          );
-        })}
+        {isLoading ? <div><h1 className="loadingMssg">Data Loading</h1> <div class="dot-falling"></div></div> :
+          filterCoins.map((coins) => {
+            return (
+              <Coin
+                id={coins.id}
+                icon={coins.image}
+                coinName={coins.name}
+                coinSymbol={coins.symbol}
+                price={coins.current_price}
+                marketCap={coins.market_cap}
+                priceChange={coins.price_change_percentage_24h}
+              />
+            );
+          })}
       </div>
     </div>
   );
