@@ -39,18 +39,19 @@ function Home() {
         <h1>Welcome to the CryptoChecker</h1>
         <div className="buttonContainer">
           <input
-            placeholder="Search for a Coin"
             type="text"
             onChange={handleSearch}
+            placeholder="Search for a Coin"
           />
-          <img onClick={refreshPage} src={Refresh}></img>
+          <img onClick={refreshPage} src={Refresh} alt="refresh page" />
         </div>
       </div>
       <div className="coinContainer">
-        {isLoading ? <div><h1 className="loadingMssg">Data Loading</h1> <div class="dot-falling"></div></div> :
+        {isLoading ? <div><h1 className="loadingMssg">Data Loading</h1> <div className="dot-falling"></div></div> :
           filterCoins.map((coins) => {
             return (
               <Coin
+                key={coins.id}
                 id={coins.id}
                 icon={coins.image}
                 coinName={coins.name}
