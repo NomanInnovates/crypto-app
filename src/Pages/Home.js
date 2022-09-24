@@ -1,6 +1,7 @@
-import "../App.css";
-import Axios from "axios";
 import { useState, useEffect } from "react";
+import Axios from "axios";
+
+import "../App.css";
 import Coin from "../Components/Coin";
 import Refresh from "../Images/refresh.png";
 
@@ -26,7 +27,6 @@ function Home() {
     Axios.get(
       "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
     ).then((response) => {
-      console.log(response.data);
       setIsLoading(false);
       setCoins(response.data);
     });
@@ -48,7 +48,7 @@ function Home() {
       </div>
       <div className="coinContainer">
         {isLoading ? <div><h1 className="loadingMssg">Data Loading</h1> <div className="dot-falling"></div></div> :
-          filterCoins.map((coins) => {
+          filterCoins?.map((coins) => {
             return (
               <Coin
                 key={coins.id}

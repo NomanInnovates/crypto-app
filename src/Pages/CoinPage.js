@@ -1,7 +1,7 @@
-import React from "react";
 import Axios from "axios";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+
 import BackgroundImg from "../Images/cryptobckg.jpeg";
 import "./Styles/CoinPage.css";
 
@@ -11,17 +11,15 @@ function CoinPage() {
   // coin start has to be null first to give time to fetch API data
 
   useEffect(() => {
-    
-    console.log(id);
     Axios.get(`https://api.coingecko.com/api/v3/coins/${id}`).then(
       (response) => {
         console.log(response.data);
         setCoin(response.data);
       }
-    ).catch(()=>{
+    ).catch(() => {
       setCoin(null)
     })
-  }, []);
+  }, [id]);
 
   // if statement to check if data has reached, only then render the component
   if (coin) {
@@ -77,16 +75,21 @@ function CoinPage() {
             <div className="coinPage-RouteButton">Go back</div>
           </Link>
 
-          {/* coinName={coins.name}
-              coinSymbol={coins.symbol}
-              price={coins.current_price}
-              marketCap={coins.market_cap}
-              priceChange={ */}
         </div>
       </div>
     );
   } else {
-    return null; // if API data not fetched, return null
+    return <div
+      className="coinPage-Container"
+      style={{
+        backgroundImage: `url(${BackgroundImg})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+      <div className="coinPage-Info"> <h1>No Data Found</h1></div>
+    </div>
+    // if API data not fetched, return null
   }
 }
 

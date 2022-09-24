@@ -17,7 +17,7 @@ const Coin = ({
       <div className="coinRow">
         <div className="coinData">
           <div className="coin">
-            <img src={icon} />
+            <img src={icon} alt={coinName} />
             <h1 className="coinName">{coinName}</h1>
             <p className="coinSymbol">{coinSymbol}</p>
             <p className="coinPrice">$ {price.toFixed(2)}</p>
